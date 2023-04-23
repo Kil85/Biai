@@ -90,3 +90,4 @@ model.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accur
 #Na ten moment z jakiegoś powodu chyba bierze 491 sampli zamiast tych 31 tys., loss: 0,3361 accuracy:0.8970 val_loss:0.1174 val_accuracy:0.9689
 eps = 15
 anc = model.fit(X_train, y_train, batch_size = 64, epochs=eps, validation_data=(X_test, y_test))
+print("siema")
