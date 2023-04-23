@@ -40,7 +40,7 @@ print(data.shape, labels.shape)
 # test_size oznacza że do testów przydzielamy 20% datasetu, reszta idzie do treningu
 # random_state - coś z shufflingiem danych, dla wielu wykonywań lepiej chyba zostawić tak jak jest
 # x to rozdział data, y to rozdział labels
-X_train, X_test, y_train, y_test = train_test_split(data, labels, test_size=0.2, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(data, labels, test_size=0.5, random_state=42)
 print(X_train.shape,X_test.shape, y_train.shape, y_test.shape)
 #Konwersja labels na macierze binarna - każdej odmiennej wartości odpowiada inny wiersz np. 1,0,0,0. Jeżeli wartość int się powtarza, to powtarza się również wiersz 1,0,0,0 w macierzy. Kolumn jest tyle ile różnych wartości (czyli w naszym przypadku 43) a wierszy tyle ile wartości łącznie (czyli ponad 31 tys. dla y_t1 i ponad 7 tys. dla y_t2)
 y_train = to_categorical(y_train, 43)
